@@ -1,0 +1,1414 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   DATATABLES
+========================================================= */
+
+.users-card .dataTables_wrapper {
+color: #142033;
+}
+
+.users-card .dataTables_length,
+.users-card .dataTables_filter {
+margin-bottom: 22px;
+}
+
+.users-card .dataTables_length select,
+.users-card .dataTables_filter input {
+border: 1px solid #d5dbe3;
+  border-radius: 8px;
+  padding: 7px 10px;
+  outline: none;
+}
+
+.users-card .dataTables_filter input:focus {
+border-color: #f47a00;
+  box-shadow: 0 0 0 3px rgba(244, 122, 0, 0.12);
+}
+
+table.dataTable.clients-table,
+table.dataTable.users-table,
+table.dataTable.inter-table {
+border-collapse: separate !important;
+  border-spacing: 0 9px !important;
+}
+
+table.dataTable.clients-table thead th,
+table.dataTable.users-table thead th,
+table.dataTable.inter-table thead th {
+background: #f6f8fb;
+  color: #142033;
+  border: none;
+  padding: 15px 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+table.dataTable.clients-table tbody tr,
+table.dataTable.users-table tbody tr,
+table.dataTable.inter-table tbody tr {
+background: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+table.dataTable.clients-table tbody td,
+table.dataTable.users-table tbody td,
+table.dataTable.inter-table tbody td {
+border-top: 1px solid #e8edf3;
+  border-bottom: 1px solid #e8edf3;
+  padding: 14px 12px;
+  vertical-align: middle;
+}
+
+table.dataTable.users-table tbody td:first-child,
+table.dataTable.inter-table tbody td:first-child {
+border-left: 1px solid #e8edf3;
+  border-radius: 12px 0 0 12px;
+}
+
+table.dataTable.users-table tbody td:last-child,
+table.dataTable.inter-table tbody td:last-child {
+border-right: 1px solid #e8edf3;
+  border-radius: 0 12px 12px 0;
+}
+
+table.dataTable.users-table tbody tr:hover {
+background: #fff7ef;
+}
+
+.dataTables_info,
+.dataTables_paginate {
+margin-top: 18px;
+}
+
+.dataTables_info {
+color: #526070;
+}
+
+.table-action {
+width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-action.edit {
+background: #14395b;
+}
+
+.table-action.reset {
+background: #f47a00;
+}
+
+.table-action.delete {
+background: #dc3545;
+}
+
+.table-action:hover {
+transform: translateY(-2px);
+  opacity: 0.88;
+}
+
+/* =========================================================
+   ÉTAT INITIAL TABLETTE — CIBLÉ
+   IMPORTANT : utiliser class="sav-form etat-init-tablette"
+========================================================= */
+
+.sav-form.etat-init-tablette {
+--primary: #0d6efd;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #fd7e14;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --bg: #f3f4f6;
+  --card: #ffffff;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px;
+  background: var(--bg);
+  font-family: Arial, sans-serif;
+}
+
+.sav-form.etat-init-tablette .form-section {
+background: var(--card);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-left: 6px solid var(--primary);
+}
+
+.sav-form.etat-init-tablette .form-section h3 {
+margin: 0 0 18px;
+  font-size: 22px;
+  color: #111827;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sav-form.etat-init-tablette .form-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.sav-form.etat-init-tablette .form-grid.one-col {
+grid-template-columns: 1fr;
+}
+
+.sav-form.etat-init-tablette .form-group-custom label,
+.sav-form.etat-init-tablette .choice-label {
+display: block;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 9px;
+  color: #374151;
+}
+
+.sav-form.etat-init-tablette .form-group-custom input,
+.sav-form.etat-init-tablette .form-group-custom select,
+.sav-form.etat-init-tablette .form-group-custom textarea {
+width: 100%;
+  min-height: 56px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 18px;
+  background: #fff;
+}
+
+.sav-form.etat-init-tablette .form-group-custom textarea {
+min-height: 130px;
+  resize: vertical;
+}
+
+.sav-form.etat-init-tablette .touch-options {
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+}
+
+.sav-form.etat-init-tablette .touch-choice {
+display: block;
+  cursor: pointer;
+}
+
+.sav-form.etat-init-tablette .touch-choice input {
+position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sav-form.etat-init-tablette .touch-choice span {
+min-height: 56px;
+  padding: 13px 12px;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  background: #fff;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.sav-form.etat-init-tablette .touch-choice input:checked + span {
+background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(13,110,253,0.25);
+}
+
+.sav-form.etat-init-tablette .touch-choice.choice-ok input:checked + span {
+background: var(--success);
+  border-color: var(--success);
+}
+
+.sav-form.etat-init-tablette .touch-choice.choice-alert input:checked + span {
+background: var(--warning);
+  border-color: var(--warning);
+}
+
+.sav-form.etat-init-tablette .touch-choice.choice-bad input:checked + span {
+background: var(--danger);
+  border-color: var(--danger);
+}
+
+.sav-form.etat-init-tablette .tablet-tabs {
+display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px 14px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #e5e7eb;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sav-form.etat-init-tablette .tablet-tab {
+flex: 0 0 auto;
+  min-width: 120px;
+  min-height: 54px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  color: #111827;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 18px;
+}
+
+.sav-form.etat-init-tablette .tablet-tab.active {
+background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.sav-form.etat-init-tablette .tablet-panel {
+display: none;
+}
+
+.sav-form.etat-init-tablette .tablet-panel.active {
+display: block;
+}
+
+.sav-form.etat-init-tablette .technical-card {
+background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.sav-form.etat-init-tablette .technical-card h4 {
+margin: 0 0 16px;
+  font-size: 21px;
+  color: #111827;
+}
+
+.sav-form.etat-init-tablette .pin-card {
+background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.sav-form.etat-init-tablette .pin-card-title {
+font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.sav-form.etat-init-tablette .pin-grid {
+display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.sav-form.etat-init-tablette .field-box {
+background: #f9fafb;
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.sav-form.etat-init-tablette .switch-zone {
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sav-form.etat-init-tablette .big-switch {
+display: block;
+  cursor: pointer;
+}
+
+.sav-form.etat-init-tablette .big-switch input[type="checkbox"] {
+position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sav-form.etat-init-tablette .big-switch input[type="hidden"] {
+display: none;
+}
+
+.sav-form.etat-init-tablette .big-switch span {
+min-height: 62px;
+  border: 2px solid var(--danger);
+  border-radius: 15px;
+  background: #fff5f5;
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+.sav-form.etat-init-tablette .big-switch span::after {
+content: "NON";
+}
+
+.sav-form.etat-init-tablette .big-switch input[type="checkbox"]:checked + span {
+border-color: var(--success);
+  background: #ecfdf3;
+  color: var(--success);
+}
+
+.sav-form.etat-init-tablette .big-switch input[type="checkbox"]:checked + span::after {
+content: "OUI";
+}
+
+.sav-form.etat-init-tablette .obtu-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* =========================================================
+   TRAVAUX TABLETTE — CIBLÉ
+   IMPORTANT : utiliser class="sav-form travaux-tablette"
+========================================================= */
+
+.sav-form.travaux-tablette {
+--bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --soft-border: #e5e7eb;
+  --primary: #0d6efd;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #fd7e14;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px;
+  background: var(--bg);
+  font-family: Arial, sans-serif;
+  color: var(--text);
+}
+
+.sav-form.travaux-tablette .tablet-header {
+position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(243, 244, 246, 0.96);
+  backdrop-filter: blur(6px);
+  padding: 10px 0 12px;
+  margin-bottom: 10px;
+}
+
+.sav-form.travaux-tablette .tablet-title {
+font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 10px;
+}
+
+.sav-form.travaux-tablette .section-tabs {
+display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sav-form.travaux-tablette .section-tabs a {
+flex: 0 0 auto;
+  text-decoration: none;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.sav-form.travaux-tablette .form-section {
+scroll-margin-top: 96px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-left: 7px solid var(--primary);
+}
+
+.sav-form.travaux-tablette .form-section h3 {
+margin: 0 0 18px;
+  font-size: 23px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sav-form.travaux-tablette .form-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.sav-form.travaux-tablette .form-grid.one-col {
+grid-template-columns: 1fr;
+}
+
+.sav-form.travaux-tablette .form-group-custom label,
+.sav-form.travaux-tablette .field-label {
+display: block;
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 9px;
+  color: #374151;
+}
+
+.sav-form.travaux-tablette .form-group-custom input,
+.sav-form.travaux-tablette .form-group-custom textarea {
+width: 100%;
+  min-height: 58px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 20px;
+  background: #fff;
+}
+
+.sav-form.travaux-tablette .form-group-custom textarea {
+min-height: 150px;
+  resize: vertical;
+  line-height: 1.35;
+}
+
+.sav-form.travaux-tablette .progress-choice-grid {
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.sav-form.travaux-tablette .progress-choice,
+.sav-form.travaux-tablette .checkbox-card {
+cursor: pointer;
+  display: block;
+}
+
+.sav-form.travaux-tablette .progress-choice input,
+.sav-form.travaux-tablette .checkbox-card input[type="checkbox"] {
+position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sav-form.travaux-tablette .progress-choice span,
+.sav-form.travaux-tablette .checkbox-card .card-ui {
+min-height: 72px;
+  padding: 14px 16px;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 900;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  user-select: none;
+}
+
+.sav-form.travaux-tablette .progress-choice input:checked + span {
+background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 5px 16px rgba(13,110,253,0.25);
+}
+
+.sav-form.travaux-tablette .checkbox-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.sav-form.travaux-tablette .checkbox-card.full {
+grid-column: 1 / -1;
+}
+
+.sav-form.travaux-tablette .checkbox-card .card-ui {
+position: relative;
+  justify-content: flex-start;
+  padding-right: 92px;
+  min-height: 82px;
+}
+
+.sav-form.travaux-tablette .checkbox-card .card-ui::after {
+content: "NON";
+  position: absolute;
+  right: 14px;
+  min-width: 58px;
+  height: 38px;
+  border-radius: 999px;
+  background: #fff5f5;
+  color: var(--danger);
+  border: 2px solid var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.sav-form.travaux-tablette .checkbox-card input[type="checkbox"]:checked + .card-ui {
+background: #ecfdf3;
+  color: #065f46;
+  border-color: var(--success);
+  box-shadow: 0 5px 16px rgba(25,135,84,0.18);
+}
+
+.sav-form.travaux-tablette .checkbox-card input[type="checkbox"]:checked + .card-ui::after {
+content: "OUI";
+  background: var(--success);
+  color: #fff;
+  border-color: var(--success);
+}
+
+.sav-form.travaux-tablette .work-card {
+background: #f9fafb;
+  border: 2px solid var(--soft-border);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.sav-form.travaux-tablette .work-card-title {
+font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.sav-form.travaux-tablette .work-card-grid {
+display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.sav-form.travaux-tablette .number-stepper {
+display: grid;
+  grid-template-columns: 62px 1fr 62px;
+  gap: 8px;
+  align-items: center;
+}
+
+.sav-form.travaux-tablette .number-stepper input {
+text-align: center;
+  font-weight: 900;
+}
+
+.responsive-table {
+width: 100%;
+  overflow-x: auto;
+}
+
+.technical-table {
+width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.technical-table th {
+background: #f6f8fb;
+  color: #142033;
+  padding: 12px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e4e9f0;
+}
+
+.technical-table td {
+padding: 12px;
+  border-bottom: 1px solid #e4e9f0;
+}
+
+.technical-table select {
+width: 100%;
+  height: 42px;
+  border: 1px solid #d5dbe3;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: white;
+}
+
+/* =========================================================
+   CONTRÔLES TABLETTE — CIBLÉ
+   À utiliser avec : class="sav-form controles-tablette"
+========================================================= */
+
+.sav-form.controles-tablette {
+--bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --soft-border: #e5e7eb;
+  --primary: #0d6efd;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #fd7e14;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px;
+  background: var(--bg);
+  font-family: Arial, sans-serif;
+  color: var(--text);
+}
+
+.sav-form.controles-tablette .tablet-header {
+position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(243, 244, 246, 0.96);
+  backdrop-filter: blur(6px);
+  padding: 10px 0 12px;
+  margin-bottom: 10px;
+}
+
+.sav-form.controles-tablette .tablet-title {
+font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 10px;
+}
+
+.sav-form.controles-tablette .section-tabs {
+display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sav-form.controles-tablette .section-tabs a {
+flex: 0 0 auto;
+  text-decoration: none;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.sav-form.controles-tablette .form-section {
+scroll-margin-top: 96px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-left: 7px solid var(--primary);
+}
+
+.sav-form.controles-tablette .form-section h3 {
+margin: 0 0 18px;
+  font-size: 23px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sav-form.controles-tablette .form-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.sav-form.controles-tablette .form-grid.one-col {
+grid-template-columns: 1fr;
+}
+
+.sav-form.controles-tablette .form-group-custom label,
+.sav-form.controles-tablette .choice-label {
+display: block;
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 9px;
+  color: #374151;
+}
+
+.sav-form.controles-tablette .form-group-custom input,
+.sav-form.controles-tablette .form-group-custom textarea {
+width: 100%;
+  min-height: 58px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 20px;
+  background: #fff;
+}
+
+.sav-form.controles-tablette .form-group-custom textarea {
+min-height: 150px;
+  resize: vertical;
+  line-height: 1.35;
+}
+
+.sav-form.controles-tablette .touch-options {
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+}
+
+.sav-form.controles-tablette .touch-choice {
+display: block;
+  cursor: pointer;
+}
+
+.sav-form.controles-tablette .touch-choice input {
+position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sav-form.controles-tablette .touch-choice span {
+min-height: 58px;
+  padding: 13px 12px;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  background: #fff;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.sav-form.controles-tablette .touch-choice input:checked + span {
+background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(13,110,253,0.25);
+}
+
+.sav-form.controles-tablette .touch-choice.choice-ok input:checked + span {
+background: var(--success);
+  border-color: var(--success);
+}
+
+.sav-form.controles-tablette .touch-choice.choice-alert input:checked + span {
+background: var(--warning);
+  border-color: var(--warning);
+}
+
+.sav-form.controles-tablette .touch-choice.choice-bad input:checked + span {
+background: var(--danger);
+  border-color: var(--danger);
+}
+
+.sav-form.controles-tablette .tablet-tabs {
+display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px 14px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #e5e7eb;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sav-form.controles-tablette .tablet-tab {
+flex: 0 0 auto;
+  min-width: 120px;
+  min-height: 54px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 18px;
+}
+
+.sav-form.controles-tablette .tablet-tab.active {
+background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.sav-form.controles-tablette .tablet-panel {
+display: none;
+}
+
+.sav-form.controles-tablette .tablet-panel.active {
+display: block;
+}
+
+.sav-form.controles-tablette .technical-card {
+background: #f9fafb;
+  border: 2px solid var(--soft-border);
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.sav-form.controles-tablette .technical-card h4 {
+margin: 0 0 16px;
+  font-size: 21px;
+  color: var(--text);
+}
+
+.sav-form.controles-tablette .pin-card {
+background: #fff;
+  border: 2px solid var(--soft-border);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.sav-form.controles-tablette .pin-card-title {
+font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.sav-form.controles-tablette .pin-grid {
+display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 0.9fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.sav-form.controles-tablette .field-box {
+background: #f9fafb;
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid var(--soft-border);
+}
+
+.sav-form.controles-tablette .switch-zone {
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sav-form.controles-tablette .big-switch {
+display: block;
+  cursor: pointer;
+}
+
+.sav-form.controles-tablette .big-switch input[type="checkbox"] {
+position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sav-form.controles-tablette .big-switch input[type="hidden"] {
+display: none;
+}
+
+.sav-form.controles-tablette .big-switch span {
+min-height: 62px;
+  border: 2px solid var(--danger);
+  border-radius: 15px;
+  background: #fff5f5;
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+.sav-form.controles-tablette .big-switch span::after {
+content: "NON";
+}
+
+.sav-form.controles-tablette .big-switch input[type="checkbox"]:checked + span {
+border-color: var(--success);
+  background: #ecfdf3;
+  color: var(--success);
+}
+
+.sav-form.controles-tablette .big-switch input[type="checkbox"]:checked + span::after {
+content: "OUI";
+}
+
+.sav-form.controles-tablette .pin-value-input {
+width: 100%;
+  min-height: 62px;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  background: #fff;
+}
+
+.sav-form.controles-tablette .obtu-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.sav-form.controles-tablette .number-stepper {
+display: grid;
+  grid-template-columns: 62px 1fr 62px;
+  gap: 8px;
+  align-items: center;
+}
+
+.sav-form.controles-tablette .number-stepper input {
+text-align: center;
+  font-weight: 900;
+}
+
+/*ADD INTER */
+  .sav-form.add-inter-tablette {
+--bg: #f3f4f6;
+    --card: #ffffff;
+    --text: #111827;
+    --border: #d1d5db;
+    --soft-border: #e5e7eb;
+    --primary: #0d6efd;
+    --success: #198754;
+    --danger: #dc3545;
+    --warning: #fd7e14;
+
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 14px;
+    background: var(--bg);
+    font-family: Arial, sans-serif;
+    color: var(--text);
+}
+
+.add-inter-tablette .tablet-header {
+position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(243, 244, 246, 0.96);
+    backdrop-filter: blur(6px);
+    padding: 10px 0 12px;
+    margin-bottom: 10px;
+}
+
+.add-inter-tablette .tablet-title {
+font-size: 24px;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+.add-inter-tablette .section-tabs {
+display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.add-inter-tablette .section-tabs a {
+flex: 0 0 auto;
+    text-decoration: none;
+    min-height: 48px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 2px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.add-inter-tablette .form-section {
+scroll-margin-top: 96px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-left: 7px solid var(--primary);
+}
+
+.add-inter-tablette .form-section h3 {
+margin: 0 0 18px;
+    font-size: 23px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-inter-tablette .form-grid {
+display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.add-inter-tablette .form-grid.one-col {
+grid-template-columns: 1fr;
+}
+
+.add-inter-tablette .form-group-custom label,
+  .add-inter-tablette .choice-label {
+display: block;
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 9px;
+    color: #374151;
+}
+
+.add-inter-tablette .form-group-custom input,
+  .add-inter-tablette .form-group-custom select,
+  .add-inter-tablette .form-group-custom textarea {
+width: 100%;
+    min-height: 58px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 12px 14px;
+    font-size: 19px;
+    background: #fff;
+}
+
+.add-inter-tablette .form-group-custom textarea {
+min-height: 140px;
+    resize: vertical;
+    line-height: 1.35;
+}
+
+.add-inter-tablette .form-group-custom input:focus,
+  .add-inter-tablette .form-group-custom select:focus,
+  .add-inter-tablette .form-group-custom textarea:focus {
+outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(13,110,253,0.15);
+}
+
+.add-inter-tablette .touch-options {
+display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 10px;
+}
+
+.add-inter-tablette .touch-choice {
+display: block;
+    cursor: pointer;
+}
+
+.add-inter-tablette .touch-choice input {
+position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.add-inter-tablette .touch-choice span {
+min-height: 58px;
+    padding: 13px 12px;
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    background: #fff;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.add-inter-tablette .touch-choice input:checked + span {
+background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 14px rgba(13,110,253,0.25);
+}
+
+.add-inter-tablette .touch-choice.choice-ok input:checked + span {
+background: var(--success);
+    border-color: var(--success);
+}
+
+.add-inter-tablette .touch-choice.choice-alert input:checked + span {
+background: var(--warning);
+    border-color: var(--warning);
+}
+
+.add-inter-tablette .touch-choice.choice-bad input:checked + span {
+background: var(--danger);
+    border-color: var(--danger);
+}
+
+.add-inter-tablette .choice-grid {
+display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.add-inter-tablette .choice-card {
+background: #f9fafb;
+    border: 2px solid var(--soft-border);
+    border-radius: 18px;
+    padding: 16px;
+}
+
+.add-inter-tablette .cycle-choice {
+width: 100%;
+    min-height: 68px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: #fff;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 12px 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.add-inter-tablette .cycle-choice.is-ok {
+background: var(--success);
+    border-color: var(--success);
+    color: #fff;
+}
+
+.add-inter-tablette .cycle-choice.is-alert {
+background: var(--warning);
+    border-color: var(--warning);
+    color: #fff;
+}
+
+.add-inter-tablette .cycle-choice.is-bad {
+background: var(--danger);
+    border-color: var(--danger);
+    color: #fff;
+}
+
+.add-inter-tablette .number-stepper {
+display: grid;
+    grid-template-columns: 62px 1fr 62px;
+    gap: 8px;
+    align-items: center;
+}
+
+.add-inter-tablette .number-stepper input {
+text-align: center;
+    font-weight: 900;
+}
+
+.sav-form.edit-inter-tablette {
+--bg: #f3f4f6;
+    --card: #ffffff;
+    --text: #111827;
+    --border: #d1d5db;
+    --soft-border: #e5e7eb;
+    --primary: #0d6efd;
+    --success: #198754;
+    --danger: #dc3545;
+    --warning: #fd7e14;
+
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 14px;
+    background: var(--bg);
+    font-family: Arial, sans-serif;
+    color: var(--text);
+}
+
+.edit-inter-tablette .tablet-header {
+position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(243, 244, 246, 0.96);
+    backdrop-filter: blur(6px);
+    padding: 10px 0 12px;
+    margin-bottom: 10px;
+}
+
+.edit-inter-tablette .tablet-title {
+font-size: 24px;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+.edit-inter-tablette .section-tabs {
+display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.edit-inter-tablette .section-tabs a {
+flex: 0 0 auto;
+    text-decoration: none;
+    min-height: 48px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 2px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.edit-inter-tablette .form-section {
+scroll-margin-top: 96px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-left: 7px solid var(--primary);
+}
+
+.edit-inter-tablette .form-section h3 {
+margin: 0 0 18px;
+    font-size: 23px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit-inter-tablette .form-grid {
+display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.edit-inter-tablette .form-grid.one-col {
+grid-template-columns: 1fr;
+}
+
+.edit-inter-tablette .form-group-custom label,
+  .edit-inter-tablette .choice-label {
+display: block;
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 9px;
+    color: #374151;
+}
+
+.edit-inter-tablette .form-group-custom input,
+  .edit-inter-tablette .form-group-custom select,
+  .edit-inter-tablette .form-group-custom textarea {
+width: 100%;
+    min-height: 58px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 12px 14px;
+    font-size: 19px;
+    background: #fff;
+}
+
+.edit-inter-tablette .form-group-custom textarea {
+min-height: 140px;
+    resize: vertical;
+    line-height: 1.35;
+}
+
+.edit-inter-tablette .form-group-custom input:focus,
+  .edit-inter-tablette .form-group-custom select:focus,
+  .edit-inter-tablette .form-group-custom textarea:focus {
+outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(13,110,253,0.15);
+}
+
+.edit-inter-tablette .choice-grid {
+display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.edit-inter-tablette .choice-card {
+background: #f9fafb;
+    border: 2px solid var(--soft-border);
+    border-radius: 18px;
+    padding: 16px;
+}
+
+.edit-inter-tablette .cycle-choice {
+width: 100%;
+    min-height: 68px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    background: #fff;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 12px 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.edit-inter-tablette .cycle-choice.is-ok {
+background: var(--success);
+    border-color: var(--success);
+    color: #fff;
+}
+
+.edit-inter-tablette .cycle-choice.is-alert {
+background: var(--warning);
+    border-color: var(--warning);
+    color: #fff;
+}
+
+.edit-inter-tablette .cycle-choice.is-bad {
+background: var(--danger);
+    border-color: var(--danger);
+    color: #fff;
+}
+
+.edit-inter-tablette .number-stepper {
+display: grid;
+    grid-template-columns: 62px 1fr 62px;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-inter-tablette .number-stepper input {
+text-align: center;
+    font-weight: 900;
+}

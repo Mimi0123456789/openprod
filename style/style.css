@@ -1,0 +1,25 @@
+/* Point d’entrée CSS OpenProd - fichier scindé */
+@import url("core/variables.css");
+@import url("core/base.css");
+@import url("core/layout.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/forms.css");
+@import url("components/tables.css");
+@import url("components/badges.css");
+@import url("components/modals.css");
+@import url("pages/dashboard.css");
+@import url("pages/clients.css");
+@import url("pages/utilisateurs.css");
+@import url("pages/interventions.css");
+@import url("pages/mon_compte.css");
+@import url("pages/etat_avancement.css");
+@import url("utilities/responsive.css");
+@import url("utilities/misc.css");
+@import url("pages/forms/add-inter-general.css");
+@import url("pages/forms/edit-inter-general.css");
+@import url("pages/forms/edit-inter-systeme.css");
+@import url("pages/forms/edit-inter-etat-init.css");
+@import url("pages/forms/edit-inter-travaux.css");
+@import url("pages/forms/edit-inter-controles.css");
+@import url("pages/forms/edit-inter-validation.css");

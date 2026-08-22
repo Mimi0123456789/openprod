@@ -1,0 +1,131 @@
+h2{
+  border: 2px solid #010000;
+  text-align: center;
+  padding: 2px;
+  font-weight: bold;
+  background-color: #FF7734;
+  color: #fdfefe;
+  margin : 1%;
+  border-radius: 5px;
+}
+
+td{
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #FEFAF8;
+  padding : 1%;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+
+table{
+ width: 100%;
+}
+
+.gros_bloc{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 80%;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
+input[type=text] {
+  margin: 1% 0;
+  text-align: center;
+  float: right;
+}
+
+input[type=date] {
+  margin: 1% 0;
+  text-align: center;
+  float: right;
+}
+
+input[type=int] {
+  margin: 1% 0;
+  text-align: center;
+  float: right;
+}
+
+input[type=checkbox] {
+  margin: 1% 0;
+  text-align: center;
+  float: right;
+}
+
+input{
+  background-image: url('searchicon.png');
+  background-repeat: no-repeat;
+  margin-right: 2%;
+  text-align: center;
+  float: right;
+}
+
+textarea{
+  width: 100%;
+  height: 70px;
+}
+
+select{
+  text-align: center;
+  padding: 2px;
+  float: right;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.switch input {
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+}
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  background: red;
+  border-radius: 50px;
+}
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 32px;
+  height: 32px;
+  background: darkgrey;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all .5s;
+}
+.switch input:checked + span {
+  background: green;
+}
+.switch input:checked + span:before {
+  left: 45px;
+}
+
+.center{
+    text-align: center;
+}
+
+h3{
+  font-weight: bold;
+}

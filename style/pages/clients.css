@@ -1,0 +1,13 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   PAGES LISTE : CLIENTS / USERS / INTERVENTIONS
+========================================================= */
+
+.clients-page,
+.users-page,
+.inter-page {
+max-width: 1450px;
+  margin: auto;
+  padding: 45px 40px;
+}

@@ -1,0 +1,46 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   BADGES / ACTIONS TABLE
+========================================================= */
+
+.login-badge,
+.role-badge,
+.inter-status,
+.inter-priority {
+padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.login-badge {
+background: #f1f5f9;
+  color: #142033;
+}
+
+.role-badge,
+.inter-status {
+background: #eaf4ff;
+  color: #14395b;
+}
+
+.inter-number-badge,
+.date-badge,
+.priority-pill {
+font-weight: 800;
+}
+
+.status-pill {
+color: white;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.inter-child-badges {
+display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

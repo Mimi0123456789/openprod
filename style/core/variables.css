@@ -1,0 +1,21 @@
+/* =========================================================
+   VARIABLES GLOBALES OPENPROD
+========================================================= */
+
+:root {
+  --op-primary: #ff7900;
+  --op-primary-dark: #f47a00;
+  --op-primary-soft: #fff1e6;
+  --op-bg: #f6f8fb;
+  --op-surface: #ffffff;
+  --op-text: #142033;
+  --op-muted: #6b7280;
+  --op-border: #e5e7eb;
+  --op-danger: #dc2626;
+  --op-success: #16a34a;
+  --op-warning: #f59e0b;
+  --op-radius-sm: 8px;
+  --op-radius: 12px;
+  --op-radius-lg: 18px;
+  --op-shadow: 0 14px 35px rgba(0, 0, 0, .08);
+}

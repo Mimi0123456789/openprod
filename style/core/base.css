@@ -1,0 +1,21 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   BASE GLOBALE
+========================================================= */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+  font-family: Avenir, Arial, sans-serif;
+  background: #f6f8fb;
+  color: #142033;
+  zoom: 85%;
+}
+
+a {
+text-decoration: none;
+}

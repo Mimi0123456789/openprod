@@ -1,0 +1,15 @@
+services:
+  openprod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: openprod_app
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./:/var/www/html
+
+    restart: unless-stopped

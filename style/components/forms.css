@@ -1,0 +1,299 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+.form-row {
+display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  margin-bottom: 28px;
+}
+
+.form-group-custom {
+display: flex;
+  flex-direction: column;
+}
+
+.form-group-custom label {
+display: block;
+  font-weight: 800;
+  color: #142033;
+  margin-bottom: 8px;
+}
+
+.form-group-custom label span {
+color: #f47a00;
+}
+
+.form-group-custom small {
+color: #59677a;
+}
+
+.input-icon {
+position: relative;
+}
+
+.input-icon i {
+position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #233044;
+}
+
+.input-icon input {
+width: 100%;
+  height: 54px;
+  border: 1px solid #d5dbe3;
+  border-radius: 7px;
+  padding: 0 16px 0 48px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-icon input:focus {
+border-color: #f47a00;
+  box-shadow: 0 0 0 3px rgba(244, 122, 0, 0.12);
+}
+
+.login-card .form-group-custom {
+text-align: left;
+  margin-bottom: 22px;
+}
+
+/* =========================================================
+   FORMULAIRES CLIENT / USER / COMPTE
+========================================================= */
+
+.client-form,
+.user-form {
+padding: 30px;
+}
+
+.client-form .form-grid,
+.user-form .form-grid,
+.account-card .form-grid {
+display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.client-form .form-grid .full,
+.user-form .form-grid .full,
+.account-card .form-grid .full {
+grid-column: 1 / -1;
+}
+
+.client-form .form-group-custom input,
+.user-form .form-group-custom input,
+.user-form .form-group-custom select,
+.account-card .form-group-custom input,
+.account-card .form-group-custom select {
+width: 100%;
+  height: 48px;
+  border: 1px solid #d5dbe3;
+  border-radius: 8px;
+  padding: 0 13px;
+  outline: none;
+  background: white;
+}
+
+.client-form .form-group-custom input:focus,
+.user-form .form-group-custom input:focus,
+.user-form .form-group-custom select:focus,
+.account-card .form-group-custom input:focus,
+.account-card .form-group-custom select:focus {
+border-color: #f47a00;
+  box-shadow: 0 0 0 3px rgba(244,122,0,0.12);
+}
+
+.form-group-custom input:disabled,
+.form-group-custom select:disabled {
+background: #eef2f6;
+  color: #5c6775;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   FORMULAIRES INTERVENTION — BASE CIBLÉE
+   IMPORTANT : utiliser class="sav-form intervention-form"
+========================================================= */
+
+.sav-form.intervention-form {
+display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: none;
+  width: 100%;
+  padding: 18px 18px 0;
+  margin: 0 auto;
+  background: #f4f6f8;
+  font-family: Arial, sans-serif;
+}
+
+.sav-form.intervention-form .form-section {
+background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border-left: 6px solid #0d6efd;
+}
+
+.sav-form.intervention-form .form-section h3 {
+margin: 0 0 20px;
+  font-size: 22px;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sav-form.intervention-form .form-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.sav-form.intervention-form .form-grid.one-col {
+grid-template-columns: 1fr;
+}
+
+.sav-form.intervention-form .form-group-custom label,
+.sav-form.intervention-form .choice-card > label {
+display: block;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.sav-form.intervention-form .form-group-custom input,
+.sav-form.intervention-form .form-group-custom select,
+.sav-form.intervention-form .form-group-custom textarea {
+width: 100%;
+  min-height: 54px;
+  border: 2px solid #d1d5db;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 18px;
+  background: #fff;
+}
+
+.sav-form.intervention-form .form-group-custom textarea {
+min-height: 130px;
+  resize: vertical;
+}
+
+.sav-form.intervention-form .form-group-custom input:focus,
+.sav-form.intervention-form .form-group-custom select:focus,
+.sav-form.intervention-form .form-group-custom textarea:focus {
+outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13,110,253,0.15);
+}
+
+.sav-form.intervention-form .choice-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.sav-form.intervention-form .choice-card {
+background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.sav-form.intervention-form .radio-line {
+position: relative;
+  margin-top: 12px;
+}
+
+.sav-form.intervention-form .radio-line input {
+position: absolute;
+  opacity: 0;
+}
+
+.sav-form.intervention-form .radio-line span {
+display: block;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 2px solid #d1d5db;
+  background: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sav-form.intervention-form .radio-line input:checked + span {
+background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+  box-shadow: 0 4px 12px rgba(13,110,253,0.25);
+}
+
+.switch input[type="checkbox"] {
+display: none;
+}
+
+.switch input[type="checkbox"]:checked + span {
+background: #f47a00;
+}
+
+.switch input[type="checkbox"]:checked + span::before {
+transform: translateX(22px);
+}
+
+.ctrl-obtu-item .cycle-choice-group {
+display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+#validation-globale .form-grid {
+gap: 22px;
+}
+
+#validation-globale .form-group-custom {
+background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+#validation-globale .form-group-custom label {
+display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #374151;
+}
+
+#validation-globale select {
+width: 100%;
+  min-height: 58px;
+  padding: 0 48px 0 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 14px;
+  background-color: #fff;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #6b7280 50%),
+                    linear-gradient(135deg, #6b7280 50%, transparent 50%);
+  background-position: calc(100% - 22px) 24px, calc(100% - 14px) 24px;
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+}
+
+#validation-globale select:focus {
+outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13,110,253,.15);
+}

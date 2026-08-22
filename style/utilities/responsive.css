@@ -1,0 +1,335 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+@keyframes modalPop {
+  from {
+    transform: translateY(12px) scale(0.98);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE GLOBAL
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inter-child-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header-overlay {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .sav-header {
+    height: auto;
+  }
+
+  .header-login {
+    text-align: center;
+  }
+
+  .header-logo img {
+    max-width: 230px;
+  }
+
+  .header-title a {
+    font-size: 34px;
+  }
+
+  .sav-grid,
+  .access-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sav-home {
+    padding: 35px 18px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .account-card .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-card {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sav-form.intervention-form .form-grid,
+  .sav-form.intervention-form .choice-grid,
+  .sav-form.etat-init-tablette .form-grid,
+  .sav-form.etat-init-tablette .pin-grid,
+  .sav-form.etat-init-tablette .obtu-grid,
+  .sav-form.etat-init-tablette .modal-actions,
+  .sav-form.travaux-tablette .form-grid,
+  .sav-form.travaux-tablette .checkbox-grid,
+  .sav-form.travaux-tablette .work-card-grid,
+  .sav-form.travaux-tablette .modal-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .sav-form.intervention-form,
+  .sav-form.etat-init-tablette,
+  .sav-form.travaux-tablette {
+    padding: 10px;
+  }
+
+  .sav-form.intervention-form .form-section,
+  .sav-form.etat-init-tablette .form-section,
+  .sav-form.travaux-tablette .form-section {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .sav-form.etat-init-tablette .touch-options {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .sav-form.travaux-tablette .tablet-title {
+    font-size: 21px;
+  }
+
+  .sav-form.travaux-tablette .progress-choice span,
+  .sav-form.travaux-tablette .checkbox-card .card-ui {
+    min-height: 76px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .users-page,
+  .inter-page {
+    padding: 30px 18px;
+  }
+
+  .users-header,
+  .inter-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-add-user,
+  .btn-add-inter {
+    width: 100%;
+  }
+
+  .custom-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .client-form .form-grid,
+  .user-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-secondary-modal,
+  .btn-primary-modal {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .custom-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .clients-header,
+  .inter-child-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clients-page,
+  .dashboard-page {
+    padding: 35px 18px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .dashboard-grid,
+  .inter-child-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-add-client {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dashboard-page {
+    padding: 35px 18px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sav-form.controles-tablette {
+    padding: 10px;
+  }
+
+  .sav-form.controles-tablette .form-section {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .sav-form.controles-tablette .form-grid,
+  .sav-form.controles-tablette .pin-grid,
+  .sav-form.controles-tablette .obtu-grid,
+  .sav-form.controles-tablette .modal-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .sav-form.controles-tablette .touch-options {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .sav-form.controles-tablette .tablet-title {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .sav-form.intervention-form .form-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .custom-modal {
+    padding: 8px;
+  }
+
+  .custom-modal-content.large-modal,
+  .large-modal {
+    width: 100vw;
+    height: 96vh;
+    max-height: 96vh;
+    border-radius: 14px;
+  }
+
+  .modal-body-content {
+    padding: 18px 14px 0;
+    max-height: calc(96vh - 90px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .control-launch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-launch-card {
+    min-height: 96px;
+    grid-template-columns: 58px 1fr 28px;
+    padding: 16px;
+  }
+
+  .control-launch-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+  }
+
+  .control-launch-content strong {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .init-obtu-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .init-obtu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .sav-form.add-inter-tablette {
+      padding: 10px;
+    }
+
+    .add-inter-tablette .form-section {
+      padding: 16px;
+      border-radius: 18px;
+    }
+
+    .add-inter-tablette .form-grid,
+    .add-inter-tablette .choice-grid,
+    .add-inter-tablette .modal-actions {
+      grid-template-columns: 1fr;
+    }
+
+    .add-inter-tablette .touch-options {
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+    .add-inter-tablette .tablet-title {
+      font-size: 21px;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+    .sav-form.edit-inter-tablette {
+      padding: 10px;
+    }
+
+    .edit-inter-tablette .form-section {
+      padding: 16px;
+      border-radius: 18px;
+    }
+
+    .edit-inter-tablette .form-grid,
+    .edit-inter-tablette .choice-grid,
+    .edit-inter-tablette .modal-actions {
+      grid-template-columns: 1fr;
+    }
+
+    .edit-inter-tablette .tablet-title {
+      font-size: 21px;
+    }
+  }

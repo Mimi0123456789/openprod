@@ -1,0 +1,234 @@
+.add-inter-tablette {
+  --add-orange: #ff7900;
+  --add-text: #142033;
+  --add-muted: #6b7280;
+  --add-border: #e5e7eb;
+  --add-bg: #f8fafc;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  font-size: 14px;
+  color: var(--add-text);
+}
+
+.add-inter-tablette .form-section {
+  background: #ffffff;
+  border: 1px solid var(--add-border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 28px rgba(20, 32, 51, 0.06);
+}
+
+.add-inter-tablette .form-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 16px;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--add-text);
+}
+
+.add-inter-tablette .form-section h3 i {
+  color: var(--add-orange);
+  font-size: 16px;
+}
+
+.add-inter-tablette .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.add-inter-tablette .form-grid.one-col {
+  grid-template-columns: 1fr;
+}
+
+.add-inter-tablette .form-group-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.add-inter-tablette .form-group-custom label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.add-inter-tablette input,
+.add-inter-tablette select,
+.add-inter-tablette textarea {
+  width: 100%;
+  min-height: 42px;
+
+  border: 1px solid var(--add-border);
+  border-radius: 12px;
+  padding: 10px 12px;
+
+  font-size: 14px;
+  color: var(--add-text);
+  background: #ffffff;
+
+  outline: none;
+  transition: all 0.18s ease;
+}
+
+.add-inter-tablette textarea {
+  min-height: 92px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.add-inter-tablette input:focus,
+.add-inter-tablette select:focus,
+.add-inter-tablette textarea:focus {
+  border-color: var(--add-orange);
+  box-shadow: 0 0 0 3px rgba(255, 121, 0, 0.14);
+}
+
+.add-inter-tablette .choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.add-inter-tablette .choice-card {
+  background: var(--add-bg);
+  border: 1px solid var(--add-border);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.add-inter-tablette .choice-label {
+  display: block;
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--add-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.add-inter-tablette .cycle-choice {
+  width: 100%;
+  min-height: 42px;
+
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 12px;
+
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+}
+
+.add-inter-tablette .cycle-choice.is-ok {
+  background: #e9f8ef;
+  color: #198754;
+}
+
+.add-inter-tablette .cycle-choice.is-alert {
+  background: #fff3df;
+  color: #d97706;
+}
+
+.add-inter-tablette .cycle-choice.is-bad {
+  background: #fdecec;
+  color: #dc3545;
+}
+
+.add-inter-tablette .number-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-inter-tablette .number-stepper input {
+  text-align: center;
+}
+
+.add-inter-tablette .step-btn {
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 12px;
+  background: #fff3e8;
+  color: var(--add-orange);
+
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+}
+
+.add-inter-tablette .step-btn:hover {
+  background: var(--add-orange);
+  color: #ffffff;
+}
+
+.add-inter-tablette .modal-actions {
+  position: sticky;
+  bottom: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  padding: 16px 0 4px;
+  background: linear-gradient(to top, #ffffff 70%, rgba(255,255,255,0));
+}
+
+.add-inter-tablette .btn-secondary-modal,
+.add-inter-tablette .btn-primary-modal {
+  min-height: 42px;
+  border-radius: 12px;
+  padding: 10px 18px;
+
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+
+  border: 0;
+  transition: all 0.18s ease;
+}
+
+.add-inter-tablette .btn-secondary-modal {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.add-inter-tablette .btn-primary-modal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--add-orange);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 121, 0, 0.22);
+}
+
+.add-inter-tablette .btn-primary-modal:hover {
+  background: #e86f00;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 820px) {
+  .add-inter-tablette .form-grid,
+  .add-inter-tablette .choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-inter-tablette .form-section {
+    padding: 15px;
+  }
+}

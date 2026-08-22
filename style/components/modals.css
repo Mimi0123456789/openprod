@@ -1,0 +1,185 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   MODALES COMMUNES
+   Anciennes redondances .custom-modal fusionnées ici.
+========================================================= */
+
+.custom-modal {
+display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.custom-modal.show {
+display: flex;
+}
+
+.custom-modal-content {
+width: 100%;
+  max-width: 720px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+  animation: modalPop 0.22s ease;
+}
+
+.custom-modal-content.large-modal,
+.large-modal {
+width: 96vw;
+  max-width: 1450px;
+  height: 92vh;
+  max-height: 92vh;
+}
+
+.custom-modal-header {
+padding: 26px 30px;
+  background: linear-gradient(90deg, #142033, #20364f);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.custom-modal-header h2 {
+margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.custom-modal-header p {
+margin: 8px 0 0;
+  color: #dbe5ef;
+}
+
+.modal-close {
+width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.14);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal-close:hover {
+background: #f47a00;
+}
+
+.modal-body-content {
+padding: 28px 32px 0;
+  max-height: calc(92vh - 95px);
+  overflow-y: auto;
+  background: #f4f6f8;
+}
+
+.modal-loading,
+.modal-error {
+padding: 30px;
+  text-align: center;
+  font-weight: 800;
+  color: #526070;
+}
+
+.modal-actions {
+display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #e7ebf0;
+}
+
+.sav-form.intervention-form .modal-actions {
+position: sticky;
+  bottom: 0;
+  background: rgba(244, 246, 248, 0.96);
+  backdrop-filter: blur(6px);
+  padding: 16px 0;
+  margin: 0 -18px;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  z-index: 10;
+  border-top: none;
+  margin-top: 0;
+}
+
+.sav-form.etat-init-tablette .modal-actions {
+position: sticky;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: var(--bg);
+  padding: 16px 0 4px;
+  z-index: 20;
+  border-top: none;
+  margin-top: 0;
+}
+
+.sav-form.travaux-tablette .modal-actions {
+position: sticky;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: rgba(243,244,246,0.96);
+  backdrop-filter: blur(6px);
+  padding: 16px 0 4px;
+  z-index: 40;
+  border-top: none;
+  margin-top: 0;
+}
+
+.sav-form.controles-tablette .modal-actions {
+position: sticky;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: rgba(243,244,246,0.96);
+  backdrop-filter: blur(6px);
+  padding: 16px 0 4px;
+  z-index: 40;
+  border-top: none;
+  margin-top: 0;
+}
+
+.add-inter-tablette .modal-actions {
+position: sticky;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    background: rgba(243,244,246,0.96);
+    backdrop-filter: blur(6px);
+    padding: 16px 0 4px;
+    z-index: 40;
+    border-top: none;
+    margin-top: 0;
+}
+
+.edit-inter-tablette .modal-actions {
+position: sticky;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    background: rgba(243,244,246,0.96);
+    backdrop-filter: blur(6px);
+    padding: 16px 0 4px;
+    z-index: 40;
+    border-top: none;
+    margin-top: 0;
+}

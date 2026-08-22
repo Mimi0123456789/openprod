@@ -1,0 +1,316 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+.button-zone {
+display: flex;
+  align-items: end;
+}
+
+.button-zone button,
+.login-button,
+.btn-add-client,
+.btn-add-user,
+.btn-add-inter {
+border: none;
+  background: linear-gradient(90deg, #ff901f, #ff7900);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button-zone button {
+width: 100%;
+  height: 54px;
+  border-radius: 7px;
+  font-size: 18px;
+}
+
+.button-zone button:hover,
+.login-button:hover,
+.btn-add-user:hover,
+.btn-primary-modal:hover {
+background: linear-gradient(90deg, #e46f00, #cc6300);
+}
+
+.login-button {
+width: 100%;
+  height: 54px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.login-button i {
+margin-right: 8px;
+}
+
+.btn-add-client,
+.btn-add-user,
+.btn-add-inter {
+height: 48px;
+  padding: 0 24px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(255, 122, 0, 0.22);
+}
+
+.btn-add-user i {
+margin-right: 8px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+border-radius: 8px !important;
+  border: 1px solid #e4e9f0 !important;
+  background: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+background: #f47a00 !important;
+  color: white !important;
+  border-color: #f47a00 !important;
+}
+
+.inter-child-btn {
+min-height: 85px;
+  padding: 10px;
+}
+
+.inter-child-btn i {
+font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.inter-child-btn span {
+font-size: 13px;
+}
+
+.inter-child-btn:hover {
+background: #fff7ef;
+  border-color: #f47a00;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.btn-secondary-modal,
+.btn-primary-modal {
+min-height: 48px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-secondary-modal {
+background: #eef2f6;
+  color: #142033;
+}
+
+.btn-primary-modal {
+background: linear-gradient(90deg, #ff901f, #ff7900);
+  color: white;
+  box-shadow: 0 12px 24px rgba(255,122,0,0.22);
+}
+
+.btn-primary-modal i {
+margin-right: 8px;
+}
+
+.sav-form.intervention-form .btn-secondary-modal,
+.sav-form.intervention-form .btn-primary-modal {
+min-height: 60px;
+  border: none;
+  border-radius: 16px;
+  font-size: 19px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sav-form.intervention-form .btn-secondary-modal {
+background: #e5e7eb;
+  color: #111827;
+}
+
+.sav-form.intervention-form .btn-primary-modal {
+background: #198754;
+  color: #fff;
+  box-shadow: none;
+}
+
+.sav-form.etat-init-tablette .btn-secondary-modal,
+.sav-form.etat-init-tablette .btn-primary-modal {
+min-height: 62px;
+  border: none;
+  border-radius: 16px;
+  font-size: 19px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.sav-form.etat-init-tablette .btn-secondary-modal {
+background: #e5e7eb;
+  color: #111827;
+}
+
+.sav-form.etat-init-tablette .btn-primary-modal {
+background: var(--success);
+  color: #fff;
+}
+
+.sav-form.travaux-tablette .step-btn {
+min-height: 58px;
+  border: 2px solid var(--border);
+  background: #fff;
+  border-radius: 16px;
+  font-size: 28px;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.sav-form.travaux-tablette .btn-secondary-modal,
+.sav-form.travaux-tablette .btn-primary-modal {
+min-height: 64px;
+  border: none;
+  border-radius: 18px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.sav-form.travaux-tablette .btn-secondary-modal {
+background: #e5e7eb;
+  color: #111827;
+}
+
+.sav-form.travaux-tablette .btn-primary-modal {
+background: var(--success);
+  color: #fff;
+}
+
+.sav-form.controles-tablette .step-btn {
+min-height: 58px;
+  border: 2px solid var(--border);
+  background: #fff;
+  border-radius: 16px;
+  font-size: 28px;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.sav-form.controles-tablette .btn-secondary-modal,
+.sav-form.controles-tablette .btn-primary-modal {
+min-height: 64px;
+  border: none;
+  border-radius: 18px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.sav-form.controles-tablette .btn-secondary-modal {
+background: #e5e7eb;
+  color: #111827;
+}
+
+.sav-form.controles-tablette .btn-primary-modal {
+background: var(--success);
+  color: #fff;
+}
+
+.cycle-choice-btn {
+width: 100%;
+  min-height: 64px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #fff;
+}
+
+.ctrl-obtu-item .cycle-choice-btn {
+width: 100%;
+    min-height: 70px;
+}
+
+.init-cycle-btn {
+width: 100%;
+  min-height: 62px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  cursor: pointer;
+}
+
+.init-obtu-item .init-cycle-btn {
+min-height: 64px;
+}
+
+.add-inter-tablette .step-btn {
+min-height: 58px;
+    border: 2px solid var(--border);
+    background: #fff;
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.add-inter-tablette .btn-secondary-modal,
+  .add-inter-tablette .btn-primary-modal {
+min-height: 64px;
+    border: none;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.add-inter-tablette .btn-secondary-modal {
+background: #e5e7eb;
+    color: #111827;
+}
+
+.add-inter-tablette .btn-primary-modal {
+background: var(--success);
+    color: #fff;
+}
+
+.edit-inter-tablette .step-btn {
+min-height: 58px;
+    border: 2px solid var(--border);
+    background: #fff;
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.edit-inter-tablette .btn-secondary-modal,
+  .edit-inter-tablette .btn-primary-modal {
+min-height: 64px;
+    border: none;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.edit-inter-tablette .btn-secondary-modal {
+background: #e5e7eb;
+    color: #111827;
+}
+
+.edit-inter-tablette .btn-primary-modal {
+background: var(--success);
+    color: #fff;
+}

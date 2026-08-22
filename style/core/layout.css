@@ -1,0 +1,202 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   HEADER PUBLIC
+========================================================= */
+
+.sav-header {
+  height: 120px;
+  background: url("images/header-background.gif") center/cover no-repeat;
+  position: relative;
+}
+
+.header-overlay {
+  height: 100%;
+  background: rgba(10, 15, 20, 0.72);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 0 48px;
+  border-bottom: 2px solid #f47a00;
+}
+
+.header-logo img {
+  max-width: 310px;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.header-title a {
+  color: #ff8a1c;
+  font-size: 48px;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+.header-title span {
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #ff8a1c;
+  margin: 10px auto 0;
+}
+
+.header-login {
+  text-align: right;
+}
+
+.header-login a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: #142033;
+  padding: 16px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.header-login a:hover {
+  color: #f47a00;
+}
+
+/* =========================================================
+   TOPBAR CONNECTÉE
+========================================================= */
+
+.topbar-connected {
+  height: 70px;
+  background: linear-gradient(
+    135deg,
+    #ff7900 0%,
+    #ff8f1f 50%,
+    #ff6a00 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    0 4px 15px rgba(255,121,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+}
+
+.topbar-connected a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+.topbar-connected a:hover {
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.topbar-connected a i {
+  font-size: 15px;
+}
+
+/* =========================================================
+   HEADERS DE PAGES
+========================================================= */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #142033;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #526070;
+  font-size: 17px;
+  margin: 0;
+}
+
+.clients-header,
+.users-header,
+.inter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.clients-header h1,
+.users-header h1,
+.inter-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+  color: #142033;
+}
+
+.clients-header p,
+.users-header p,
+.inter-header p {
+  margin: 8px 0 0;
+  color: #526070;
+}
+
+.inter-child-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.inter-child-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #142033;
+}
+
+.inter-child-header p {
+  margin: 6px 0 0;
+  color: #526070;
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.account-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  color: #142033;
+}
+
+.account-header p {
+  margin-top: 8px;
+  color: #6b7685;
+  font-size: 15px;
+}

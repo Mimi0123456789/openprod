@@ -1,0 +1,206 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   ACCUEIL / SUIVI SAV
+========================================================= */
+
+.page-content {
+width: 100%;
+}
+
+.access-grid {
+display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 42px;
+}
+
+.access-icon {
+width: 78px;
+  height: 78px;
+  border-radius: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+}
+
+.access-icon.orange {
+background: linear-gradient(135deg, #ff9a22, #ff7400);
+}
+
+.access-icon.blue {
+background: linear-gradient(135deg, #0d2c4a, #174b78);
+}
+
+.arrow {
+font-size: 26px;
+  color: #f47a00;
+}
+
+/* =========================================================
+   CONNEXION
+========================================================= */
+
+.login-page {
+min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background:
+    radial-gradient(circle at top, rgba(255, 122, 0, 0.10), transparent 35%),
+    #f6f8fb;
+}
+
+.login-icon {
+width: 78px;
+  height: 78px;
+  margin: 0 auto 22px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff9a22, #ff7400);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.login-error {
+background: #fff1f1;
+  color: #842029;
+  border-left: 5px solid #dc3545;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.login-error i {
+margin-right: 8px;
+}
+
+.login-footer {
+margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e7ebf0;
+  font-size: 14px;
+  color: #526070;
+}
+
+.login-footer i {
+color: #f47a00;
+  margin-right: 6px;
+}
+
+tr.shown {
+background: #fff7ef !important;
+}
+
+.center {
+text-align: center;
+}
+
+.switch {
+position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.switch span {
+position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #cbd5e1;
+  border-radius: 999px;
+  transition: 0.25s;
+}
+
+.switch span::before {
+content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.25s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.control-launch-section {
+border-left-color: #14395b !important;
+}
+
+.control-launch-grid {
+display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.control-launch-icon {
+width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.control-launch-content strong {
+display: block;
+  font-size: 21px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.control-launch-content small {
+display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.control-launch-arrow {
+font-size: 22px;
+  color: #9ca3af;
+}
+
+.collapse-toggle:hover {
+background: #eef2f7;
+}
+
+.cycle-bad {
+background: #dc3545;
+}
+
+.cycle-new {
+background: #0d6efd;
+}
+
+.cycle-neutral {
+background: #6b7280;
+}
+
+.init-cycle-ok {
+background: #198754;
+}
+
+.init-cycle-alert {
+background: #fd7e14;
+}
+
+.init-cycle-bad {
+background: #dc3545;
+}
+
+.init-cycle-neutral {
+background: #6b7280;
+}

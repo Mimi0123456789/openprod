@@ -1,0 +1,72 @@
+/* Fichier généré automatiquement depuis style/style.original.css */
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard-page {
+max-width: 1350px;
+  margin: auto;
+  padding: 55px 40px;
+}
+
+.dashboard-user {
+background: white;
+  border: 1px solid #e4e9f0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  color: #142033;
+  font-weight: 800;
+}
+
+.dashboard-user i {
+color: #f47a00;
+  margin-right: 8px;
+}
+
+.dashboard-grid {
+display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.dashboard-icon {
+width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  margin-bottom: 24px;
+}
+
+.dashboard-icon.orange {
+background: linear-gradient(135deg, #ff9a22, #ff7400);
+}
+
+.dashboard-icon.blue {
+background: linear-gradient(135deg, #14395b, #23689b);
+}
+
+.dashboard-icon.green {
+background: linear-gradient(135deg, #0f8f5f, #15b87a);
+}
+
+.dashboard-icon.grey {
+background: linear-gradient(135deg, #59677a, #8d99a8);
+}
+
+.dashboard-icon.purple {
+background: linear-gradient(135deg, #6f42c1, #9b72df);
+}
+
+.dashboard-icon.dark {
+background: linear-gradient(135deg, #142033, #334155);
+}
+
+.dashboard-icon.cyan {
+background: linear-gradient(135deg, #14acc7, #0d7892);
+}
