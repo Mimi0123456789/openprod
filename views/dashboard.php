@@ -28,6 +28,7 @@
         <p>Consulter ou modifier vos informations personnelles.</p>
       </a>
 
+      <?php if ($_SESSION["utilisateurs"]["id_fonctions"] == "1" || $_SESSION["utilisateurs"]["id_fonctions"] == "3") { ?>
       <a class="dashboard-card" href="index.php?c=transverse&a=listing_clients">
         <div class="dashboard-icon blue">
           <i class="fa-solid fa-user-tie"></i>
@@ -35,6 +36,8 @@
         <h3>Clients</h3>
         <p>Accéder à la liste des clients et à leurs interventions.</p>
       </a>
+
+      <?php } ?>
 
       <a class="dashboard-card highlight" href="index.php?c=transverse&a=fprod_en_cours">
         <div class="dashboard-icon green">
@@ -44,6 +47,7 @@
         <p>Suivre les interventions actuellement actives.</p>
       </a>
 
+      <?php if ($_SESSION["utilisateurs"]["id_fonctions"] == "1" || $_SESSION["utilisateurs"]["id_fonctions"] == "3") { ?>
       <a class="dashboard-card" href="index.php?c=transverse&a=fprod_cloture">
         <div class="dashboard-icon grey">
           <i class="fa-solid fa-box-archive"></i>
@@ -52,7 +56,9 @@
         <p>Consulter les interventions terminées ou clôturées.</p>
       </a>
 
-      <?php if ($_SESSION["utilisateurs"]["id_fonctions"] == "6" || $_SESSION["utilisateurs"]["id_fonctions"] == "1") { ?>
+      <?php } ?>
+
+      <?php if ($_SESSION["utilisateurs"]["id_fonctions"] == "3") { ?>
 
         <a class="dashboard-card admin" href="index.php?c=administration&a=gestion_utilisateurs">
           <div class="dashboard-icon purple">
@@ -62,6 +68,9 @@
           <p>Gérer les comptes et les accès des utilisateurs.</p>
         </a>
 
+        <?php } ?>
+
+        <?php if ($_SESSION["utilisateurs"]["id_fonctions"] == "1" || $_SESSION["utilisateurs"]["id_fonctions"] == "3") { ?>
         <a class="dashboard-card admin" href="index.php?c=administration&a=stats">
           <div class="dashboard-icon cyan">
             <i class="fa-solid fa-chart-line"></i>
