@@ -4,14 +4,25 @@
 
 		// Paramètres de connexion
 		private $bdd;
-		private $jawsdbUrl = getenv('JAWSDB_URL');
-		private $host = $url['host'];
-		private $port = $url['port'] ?? 3306;
-		private $user = $url['user'];
-		private $password = $url['pass'];
+		private $jawsdbUrl; 
+		private $host;
+		private $port;
+		
+		private $user; 
+		private $password; 
+		private $db_name;
+		private $charset;
+		private $collate;
+
+		$jawsdbUrl = getenv('JAWSDB_URL');
+		$host = $url['host'];
+		$port = $url['port'] ?? 3306;
+		$user = $url['user'];
+		$password = $url['pass'];
 		$db_name = ltrim($url['path'], '/');
-		private $charset = "utf8";
-		private $collate = 'utf8_unicode_ci';
+		$charset = "utf8";
+		$collate = 'utf8_unicode_ci';
+
 
 		// Fonction de connexion - Méthode PDO
 		public function __construct() {
