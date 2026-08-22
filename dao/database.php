@@ -1,53 +1,61 @@
 <?php
 
-	class database {
+class database
+{
+    private $bdd;
 
-		// Paramètres de connexion
-		private $bdd;
-		private $jawsdbUrl; 
-		private $host;
-		private $port;
-		
-		private $user; 
-		private $password; 
-		private $db_name;
-		private $charset;
-		private $collate;
+    public function __construct()
+    {
+        try {
+            $jawsdbUrl = getenv('JAWSDB_URL');
 
-		$jawsdbUrl = getenv('JAWSDB_URL');
-		$host = $url['host'];
-		$port = $url['port'] ?? 3306;
-		$user = $url['user'];
-		$password = $url['pass'];
-		$db_name = ltrim($url['path'], '/');
-		$charset = "utf8";
-		$collate = 'utf8_unicode_ci';
+            if (!empty($jawsdbUrl)) {
+                $url = parse_url($jawsdbUrl);
 
+                $host = $url['host'];
+                $port = $url['port'] ?? 3306;
+                $user = $url['user'];
+                $password = $url['pass'];
+                $db_name = ltrim($url['path'], '/');
+            } else {
+                // Local / Docker
+                $host = "host.docker.internal";
+                $port = "3306";
+                $user = "root";
+                $password = "";
+                $db_name = "openprod";
+            }
 
-		// Fonction de connexion - Méthode PDO
-		public function __construct() {
+            $charset = "utf8mb4";
+            $collate = "utf8mb4_unicode_ci";
 
-			try {
-				$this->bdd = new PDO("mysql:host=".$this->host.";port=".$this->port.";dbname=".$this->db_name.";charset=".$this->charset, $this->user, $this->password,
-					array(
-						PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-						PDO::ATTR_PERSISTENT => false,
-						PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-						PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES $this->charset COLLATE $this->collate"
-					)
-				);
-			}
-			catch(PDOException $e) {
-				echo("Erreur de connexion à la base !");
-			}
-		}
+            $dsn = "mysql:host={$host};port={$port};dbname={$db_name};charset={$charset}";
 
-		public function connexion() {
+            $this->bdd = new PDO(
+                $dsn,
+                $user,
+                $password,
+                [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_PERSISTENT => false,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::MYSQL_ATTR_INIT_COMMAND =>
+                        "SET NAMES {$charset} COLLATE {$collate}"
+                ]
+            );
 
-			if($this->bdd instanceof PDO) {
-				return $this->bdd;
-			}
-		}
-	}
+        } catch (PDOException $e) {
+            error_log("Erreur connexion BDD : " . $e->getMessage());
+            $this->bdd = null;
+        }
+    }
 
-?>
+    public function connexion()
+    {
+        if ($this->bdd instanceof PDO) {
+            return $this->bdd;
+        }
+
+        return null;
+    }
+}
