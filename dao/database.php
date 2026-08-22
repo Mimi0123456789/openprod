@@ -4,13 +4,12 @@
 
 		// Paramètres de connexion
 		private $bdd;
-		// a modifier avec le serveur
-		private $host = "host.docker.internal";
-		// a modifier avec le serveur
-		private $port = "3306";
-		private $user = "root";
-		private $password = "";
-		private $db_name= "openprod";
+		private $jawsdbUrl = getenv('JAWSDB_URL');
+		private $host = $url['host'];
+		private $port = $url['port'] ?? 3306;
+		private $user = $url['user'];
+		private $password = $url['pass'];
+		$db_name = ltrim($url['path'], '/');
 		private $charset = "utf8";
 		private $collate = 'utf8_unicode_ci';
 
