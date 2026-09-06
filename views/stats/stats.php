@@ -671,11 +671,6 @@ function h($value)
             <h1>Tableau de bord</h1>
             <p>Vue d’ensemble de votre activité SAV</p>
         </div>
-
-        <div class="dashboard-search">
-            <input type="text" id="dashboardSearch" placeholder="Rechercher intervention, système, demande...">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
     </div>
 
     <div class="kpi-grid">
