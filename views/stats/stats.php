@@ -108,6 +108,7 @@
 
     .dashboard-grid {
         display: grid;
+        width: 100%;
         grid-template-columns: 1.45fr 1fr 1fr;
         grid-template-areas:
             "pipeline pipeline alerts"
@@ -743,83 +744,7 @@ function h($value)
                     </div>
                 <?php endforeach; ?>
             </div>
-
-            <div class="progress-global">
-                <span>Avancement global</span>
-                <div>
-                    <b style="width: <?= $avancementGlobal ?>%"></b>
-                </div>
-                <strong><?= $avancementGlobal ?>%</strong>
-            </div>
         </section>
-
-
-        <section class="panel alert-panel">
-            <div class="panel-title">
-                <h2>Urgences</h2>
-            </div>
-
-            <?php if (empty($alertes)): ?>
-                <p class="empty">Aucune alerte critique.</p>
-            <?php endif; ?>
-
-            <?php foreach ($alertes as $alerte): ?>
-                <div class="alert-item">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <div>
-                        <strong>#<?= h($alerte['id']) ?> - <?= h($alerte['titre']) ?></strong>
-                        <span><?= h($alerte['message']) ?></span>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </section>
-
-        <section class="panel table-panel">
-            <div class="panel-title">
-                <h2>Interventions récentes</h2>
-            </div>
-
-            <table id="interventionsTable">
-                <thead>
-                    <tr>
-                        <th>N°</th>
-                        <th>Demande</th>
-                        <th>Système</th>
-                        <th>Avancement</th>
-                        <th>Échéance</th>
-                        <th>Contrôle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($recentes as $fiche):
-                        $inter = $fiche['intervention'] ?? [];
-                        $systeme = $fiche['systeme'] ?? [];
-                        $controle = $fiche['controles'] ?? [];
-                        $isLate = !empty($inter['date_max']) && $inter['date_max'] < $today && ((int)($inter['id_avancements'] ?? 0) < 7);
-                    ?>
-                        <tr>
-                            <td>#<?= h($fiche['id_inter']) ?></td>
-                            <td><?= h($inter['demande'] ?? '') ?></td>
-                            <td><?= h($systeme['type'] ?? 'Non renseigné') ?></td>
-                            <td>
-                                <span class="badge blue-badge">
-                                    Av. <?= h($inter['id_avancements'] ?? '') ?>
-                                </span>
-                            </td>
-                            <td class="<?= $isLate ? 'text-danger' : '' ?>">
-                                <?= h($inter['date_max'] ?? '') ?>
-                            </td>
-                            <td>
-                                <span class="badge <?= ($controle['tt_validation'] ?? '') === 'VALIDÉ' ? 'green-badge' : 'red-badge' ?>">
-                                    <?= h($controle['tt_validation'] ?? 'Non renseigné') ?>
-                                </span>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </section>
-
     </div>
 </div>
 
