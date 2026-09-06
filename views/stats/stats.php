@@ -106,13 +106,13 @@
 
     .dashboard-grid {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.45fr 1fr 1fr;
         grid-template-areas:
-            "pipeline alerts"
-            "table health"
-            "systeme travaux"
-            "priorite priorite";
+            "pipeline pipeline alerts"
+            "table systeme travaux"
+            "table health priorite";
         gap: 22px;
+        align-items: stretch;
     }
 
     .panel {
@@ -126,7 +126,7 @@
 
     .panel-large {
         grid-area: pipeline;
-        min-height: 340px;
+        min-height: 330px;
     }
 
     .alert-panel {
@@ -136,7 +136,7 @@
 
     .table-panel {
         grid-area: table;
-        min-height: 430px;
+        min-height: 100%;
     }
 
     .dashboard-grid > .panel:nth-of-type(2) {
@@ -342,6 +342,16 @@
         gap: 14px;
     }
 
+    .table-panel table {
+        table-layout: fixed;
+    }
+
+    .table-panel td,
+    .table-panel th {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .health-grid div {
         min-height: 118px;
         border: 1px solid #e5e7eb;
@@ -381,7 +391,7 @@
         }
 
         .dashboard-grid {
-            grid-template-columns: 2.2fr 1fr;
+            grid-template-columns: 1.6fr 1fr 1fr;
         }
 
         canvas {
@@ -393,7 +403,7 @@
         }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1350px) {
         .dashboard-header {
             flex-direction: column;
             align-items: flex-start;
@@ -404,6 +414,29 @@
         }
 
         .kpi-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .dashboard-grid {
+            grid-template-columns: 1.35fr 1fr;
+            grid-template-areas:
+                "pipeline alerts"
+                "table systeme"
+                "table health"
+                "travaux priorite";
+        }
+
+        .pipeline {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .pipeline-step:not(:last-child)::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 950px) {
+        .kpi-grid {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -413,18 +446,10 @@
                 "pipeline"
                 "alerts"
                 "table"
-                "health"
                 "systeme"
                 "travaux"
+                "health"
                 "priorite";
-        }
-
-        .pipeline {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .pipeline-step:not(:last-child)::after {
-            display: none;
         }
     }
 
@@ -516,6 +541,7 @@ $travauxStats = [
 ];
 
 $alertes = [];
+$avancementCumule = 0;
 
 foreach ($interventions as $fiche) {
     $inter = $fiche['intervention'] ?? [];
@@ -528,6 +554,11 @@ foreach ($interventions as $fiche) {
 
     $avancement = (int)($inter['id_avancements'] ?? 0);
     $parAvancement[$avancement] = ($parAvancement[$avancement] ?? 0) + 1;
+
+    // Progression moyenne : avancement 1 à 8 ramené sur 100 %.
+    if ($avancement > 0) {
+        $avancementCumule += min($avancement, 8);
+    }
 
     $typeSysteme = $systeme['type'] ?? 'Non renseigné';
     $parTypeSysteme[$typeSysteme] = ($parTypeSysteme[$typeSysteme] ?? 0) + 1;
@@ -591,6 +622,7 @@ foreach ($interventions as $fiche) {
 }
 
 $validationRate = $total > 0 ? round((($total - $nonValidees) / $total) * 100) : 0;
+$avancementGlobal = $total > 0 ? round(($avancementCumule / ($total * 8)) * 100) : 0;
 
 usort($interventions, function ($a, $b) {
     return ($b['id_inter'] ?? 0) <=> ($a['id_inter'] ?? 0);
@@ -700,9 +732,9 @@ function h($value)
             <div class="progress-global">
                 <span>Avancement global</span>
                 <div>
-                    <b style="width: <?= $validationRate ?>%"></b>
+                    <b style="width: <?= $avancementGlobal ?>%"></b>
                 </div>
-                <strong><?= $validationRate ?>%</strong>
+                <strong><?= $avancementGlobal ?>%</strong>
             </div>
         </section>
 
