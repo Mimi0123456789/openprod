@@ -738,12 +738,6 @@ function h($value)
             </div>
         </section>
 
-        <section class="panel">
-            <div class="panel-title">
-                <h2>Répartition par système</h2>
-            </div>
-            <canvas id="systemeChart"></canvas>
-        </section>
 
         <section class="panel alert-panel">
             <div class="panel-title">
@@ -809,49 +803,6 @@ function h($value)
                     <?php endforeach; ?>
                 </tbody>
             </table>
-        </section>
-
-        <section class="panel">
-            <div class="panel-title">
-                <h2>Activité atelier</h2>
-            </div>
-            <canvas id="travauxChart"></canvas>
-        </section>
-
-        <section class="panel">
-            <div class="panel-title">
-                <h2>Santé technique</h2>
-            </div>
-
-            <div class="health-grid">
-                <div>
-                    <i class="fa-solid fa-temperature-high"></i>
-                    <strong><?= $sante['resistances_hs'] ?></strong>
-                    <span>Résistances HS</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-bolt"></i>
-                    <strong><?= $sante['sondes_hs'] ?></strong>
-                    <span>Sondes HS</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-droplet"></i>
-                    <strong><?= $sante['fuites'] ?></strong>
-                    <span>Fuites</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-circle-xmark"></i>
-                    <strong><?= $sante['non_valides'] ?></strong>
-                    <span>Non validés</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="panel">
-            <div class="panel-title">
-                <h2>Priorités</h2>
-            </div>
-            <canvas id="prioriteChart"></canvas>
         </section>
 
     </div>
