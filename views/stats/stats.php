@@ -11,6 +11,8 @@
         margin: 0;
         padding: 28px 36px;
         color: #111827;
+        display: flex;
+        flex-direction: column;
     }
 
     .dashboard-header {
@@ -113,6 +115,9 @@
             "table health priorite";
         gap: 22px;
         align-items: stretch;
+        grid-auto-rows: 1fr; /* rows stretch evenly */
+        flex: 1; /* let grid expand to fill page */
+        height: 100%;
     }
 
     .panel {
@@ -120,23 +125,31 @@
         border-radius: 22px;
         padding: 24px;
         box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-        border: 1px solid #e8edf3;
+        border: none; /* remove thin panel borders (cleaner look) */
         min-height: 280px;
+        display: flex;
+        flex-direction: column;
     }
 
     .panel-large {
         grid-area: pipeline;
         min-height: 330px;
+        height: 100%;
     }
 
     .alert-panel {
         grid-area: alerts;
         background: #fff7f7;
+        height: 100%;
     }
 
     .table-panel {
         grid-area: table;
         min-height: 100%;
+        height: 100%;
+        overflow: auto; /* allow table to scroll if needed */
+        display: flex;
+        flex-direction: column;
     }
 
     .dashboard-grid > .panel:nth-of-type(2) {
@@ -291,14 +304,16 @@
         font-size: 13px;
         color: #6b7280;
         padding: 13px 14px;
-        border-bottom: 1px solid #e5e7eb;
+        /* removed bottom border for cleaner look */
+        border-bottom: none;
         text-transform: uppercase;
         letter-spacing: 0.03em;
     }
 
     td {
         padding: 15px 14px;
-        border-bottom: 1px solid #f3f4f6;
+        /* removed bottom border for cleaner look */
+        border-bottom: none;
         font-size: 14px;
     }
 
@@ -809,14 +824,10 @@ function h($value)
 </div>
 
 <script>
-const systemeLabels = <?= json_encode(array_keys($parTypeSysteme), JSON_UNESCAPED_UNICODE) ?>;
-const systemeValues = <?= json_encode(array_values($parTypeSysteme)) ?>;
 
 const travauxLabels = <?= json_encode(array_keys($travauxStats), JSON_UNESCAPED_UNICODE) ?>;
 const travauxValues = <?= json_encode(array_values($travauxStats)) ?>;
 
-const prioriteLabels = <?= json_encode(array_keys($priorites), JSON_UNESCAPED_UNICODE) ?>;
-const prioriteValues = <?= json_encode(array_values($priorites)) ?>;
 </script>
 
 <script src="assets/js/dashboard_nosql.js"></script>
