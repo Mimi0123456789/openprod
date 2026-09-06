@@ -37,9 +37,11 @@
 			}
 
 			try {
-				require_once(ROOT_PATH . '/services/InterventionNoSqlExporter.php');
+				// Check that the intervention exists in the database.
+				$fInterModel = new f_interModel();
+				$intervention = $fInterModel->getById($id_inter);
 
-				return InterventionNoSqlExporter::generate($id_inter);
+				return (bool) $intervention;
 
 			} catch (Throwable $e) {
 				error_log(
@@ -250,23 +252,15 @@
 
 		        $id_inter = $intervention->add($intervention);
 
-		        if ($id_inter) {
-		            require_once(ROOT_PATH . '/services/InterventionNoSqlExporter.php');
-
-		            $ok = InterventionNoSqlExporter::generate((int) $id_inter);
-
-		            if (!$ok) {
-		                error_log("Erreur export JSON intervention ID : " . $id_inter);
-		            }
-
-		            $response = [
-		                'success' => true,
-		                'message' => 'Intervention créée avec succès',
-		                'id_inter' => (int) $id_inter
-		            ];
-		        } else {
-		            $response['message'] = 'Erreur lors de la création';
-		        }
+				if ($id_inter) {
+					$response = [
+						'success' => true,
+						'message' => 'Intervention créée avec succès',
+						'id_inter' => (int) $id_inter
+					];
+				} else {
+					$response['message'] = 'Erreur lors de la création';
+				}
 		    }
 
 		    echo json_encode(

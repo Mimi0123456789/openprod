@@ -5,23 +5,42 @@ require_once(ROOT_PATH . "/vendor/autoload.php");
 use Dompdf\Dompdf;
 use Dompdf\Options;
 
-require_once(ROOT_PATH . "/services/InterventionNoSqlExporter.php");
+require_once(ROOT_PATH . "/model/f_inter.php");
+require_once(ROOT_PATH . "/model/systemes.php");
+require_once(ROOT_PATH . "/model/etat_init.php");
+require_once(ROOT_PATH . "/model/travaux.php");
+require_once(ROOT_PATH . "/model/tests.php");
 
 class InterventionPdfGenerator
 {
     public static function output(int $id_inter): string
     {
-        $jsonPath = ROOT_PATH . "/storage/nosql/interventions/intervention_" . $id_inter . ".json";
-
-        if (!file_exists($jsonPath)) {
-            throw new Exception("JSON introuvable");
+        if ($id_inter <= 0) {
+            throw new Exception("Intervention invalide");
         }
 
-        $fiche = json_decode(file_get_contents($jsonPath), true);
+        $interventionModel = new f_interModel();
+        $systemesModel = new systemesModel();
+        $etatInitModel = new etat_initModel();
+        $travauxModel = new travauxModel();
+        $testsModel = new testsModel();
 
-        if (!$fiche) {
-            throw new Exception("JSON invalide");
+        $intervention = $interventionModel->getById($id_inter);
+
+        if (!$intervention) {
+            throw new Exception("Intervention introuvable");
         }
+
+        $fiche = [
+            'type' => 'intervention',
+            'id_inter' => $id_inter,
+            'updated_at' => date('Y-m-d H:i:s'),
+            'intervention' => $intervention,
+            'systeme' => $systemesModel->getByInterventionId($id_inter),
+            'etat_initial' => $etatInitModel->getByInterventionId($id_inter),
+            'travaux' => $travauxModel->getByInterventionId($id_inter),
+            'controles' => $testsModel->getByInterventionId($id_inter),
+        ];
 
         $html = self::renderHtml($fiche);
 
@@ -47,19 +66,29 @@ class InterventionPdfGenerator
             exit("Intervention invalide");
         }
 
-        $jsonPath = ROOT_PATH . "/storage/nosql/interventions/intervention_" . $id_inter . ".json";
+        $interventionModel = new f_interModel();
+        $systemesModel = new systemesModel();
+        $etatInitModel = new etat_initModel();
+        $travauxModel = new travauxModel();
+        $testsModel = new testsModel();
 
-        if (!file_exists($jsonPath)) {
+        $intervention = $interventionModel->getById($id_inter);
+
+        if (!$intervention) {
             http_response_code(404);
-            exit("Fichier JSON introuvable : " . $jsonPath);
+            exit("Intervention introuvable");
         }
 
-        $fiche = json_decode(file_get_contents($jsonPath), true);
-
-        if (!$fiche) {
-            http_response_code(500);
-            exit("JSON invalide");
-        }
+        $fiche = [
+            'type' => 'intervention',
+            'id_inter' => $id_inter,
+            'updated_at' => date('Y-m-d H:i:s'),
+            'intervention' => $intervention,
+            'systeme' => $systemesModel->getByInterventionId($id_inter),
+            'etat_initial' => $etatInitModel->getByInterventionId($id_inter),
+            'travaux' => $travauxModel->getByInterventionId($id_inter),
+            'controles' => $testsModel->getByInterventionId($id_inter),
+        ];
 
         $html = self::renderHtml($fiche);
 

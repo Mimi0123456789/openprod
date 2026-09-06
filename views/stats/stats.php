@@ -452,16 +452,35 @@
 </style>
 <?php
 
-$dir = ROOT_PATH . '/storage/nosql/interventions';
+require_once(ROOT_PATH . '/model/f_inter.php');
+require_once(ROOT_PATH . '/model/systemes.php');
+require_once(ROOT_PATH . '/model/etat_init.php');
+require_once(ROOT_PATH . '/model/travaux.php');
+require_once(ROOT_PATH . '/model/tests.php');
+
+$fInterModel = new f_interModel();
+$systemesModel = new systemesModel();
+$etatInitModel = new etat_initModel();
+$travauxModel = new travauxModel();
+$testsModel = new testsModel();
+
+$rawInterventions = $fInterModel->getAll();
 $interventions = [];
 
-foreach (glob($dir . '/intervention_*.json') as $file) {
-    $json = file_get_contents($file);
-    $data = json_decode($json, true);
+foreach ($rawInterventions as $intervention) {
+    $id = (int)($intervention['id'] ?? 0);
+    $fiche = [
+        'type' => 'intervention',
+        'id_inter' => $id,
+        'updated_at' => date('Y-m-d H:i:s'),
+        'intervention' => $intervention,
+        'systeme' => $systemesModel->getByInterventionId($id),
+        'etat_initial' => $etatInitModel->getByInterventionId($id),
+        'travaux' => $travauxModel->getByInterventionId($id),
+        'controles' => $testsModel->getByInterventionId($id),
+    ];
 
-    if (is_array($data) && isset($data['id_inter'])) {
-        $interventions[] = $data;
-    }
+    $interventions[] = $fiche;
 }
 
 $total = count($interventions);
