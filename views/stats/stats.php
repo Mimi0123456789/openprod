@@ -137,6 +137,11 @@
         min-height: 330px;
         height: 100%;
     }
+    /* Ensure the pipeline panel truly spans the available horizontal space */
+    .panel-large {
+        width: 100%;
+        grid-column: 1 / span 2;
+    }
 
     .alert-panel {
         grid-area: alerts;
@@ -190,6 +195,9 @@
         align-items: start;
         min-height: 205px;
         padding-top: 14px;
+    }
+    .pipeline {
+        width: 100%;
     }
 
     .pipeline-step {
